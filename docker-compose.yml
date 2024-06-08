@@ -1,0 +1,33 @@
+services:
+  authguard:
+    container_name: authguard
+    image: jkopacz03/auth-guard:authguard-1.0
+    restart: always
+    environment:
+      - AUTHGUARD_USERNAME=example
+      - AUTHGUARD_PASSWORD=example
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://auth_db:5432/auth
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=qwerty
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
+    ports:
+      - "7777:7777"
+
+  authguard-gui:
+    container_name: authguard-gui
+    image: jkopacz03/auth-guard:authguard-gui-1.0
+    restart: always
+    depends_on:
+      - authguard
+    ports:
+      - "3000:3000"
+
+  auth_db:
+    container_name: auth_db
+    image: postgres:15-alpine3.18
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: qwerty
+      POSTGRES_DB: auth
+    ports:
+      - "5432:5432"

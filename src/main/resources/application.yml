@@ -1,0 +1,24 @@
+server:
+  port: 7777
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:mydb}
+    username: ${SPRING_DATASOURCE_USERNAME:sa}
+    password: ${SPRING_DATASOURCE_PASSWORD:password}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME:org.h2.Driver}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:none}
+  liquibase:
+    change-log: classpath:changelog-master.xml
+    enabled: true
+
+jwt:
+  issuer-uri: ${JWT_ISSUER_URI:http://localhost:7777}
+
+authguard:
+  username: ${AUTHGUARD_USERNAME:admin}
+  password: ${AUTHGUARD_PASSWORD:admin}
+
