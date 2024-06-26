@@ -1,7 +1,7 @@
 # AuthGuard
 AuthGuard is a simplified version of Keycloak, providing a user-friendly GUI to manage users, roles, and permissions. It connects through OAuth2 technology, offering a robust and secure authentication and authorization solution.
 
-![alt text]([https://github.com/JKopacz03/authguard-backend/main/image.png](https://github.com/JKopacz03/authguard-backend/blob/main/image.png)?raw=true)
+![alt text](https://github.com/JKopacz03/authguard-backend/blob/main/image.png?raw=true)
 
 ## Features
 * User management: Create, update, and delete users.
