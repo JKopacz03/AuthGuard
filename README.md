@@ -1,8 +1,7 @@
-AuthGuard is a simple keycloak, helping you manage your auth users.
-Go to https://hub.docker.com/repository/docker/jkopacz03/auth-guard/general, and make your security simple.
-
 # AuthGuard
 AuthGuard is a simplified version of Keycloak, providing a user-friendly GUI to manage users, roles, and permissions. It connects through OAuth2 technology, offering a robust and secure authentication and authorization solution.
+
+![alt text](https://github.com/JKopacz03/authguard-backend/main/image.png?raw=true)
 
 ## Features
 * User management: Create, update, and delete users.
